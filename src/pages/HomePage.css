@@ -1,0 +1,16 @@
+.home-container {
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  padding: 40px;
+}
+
+.filters {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.filters select {
+  height: 45px;
+  padding: 0 15px;
+}
