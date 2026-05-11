@@ -1,4 +1,3 @@
-import { describe, test, expect, vi } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import SearchBar from '../components/SearchBar/SearchBar'
@@ -31,9 +30,10 @@ describe('SearchBar', () => {
       />
     )
 
-    await userEvent.click(
+    const button =
       screen.getByText('Search!')
-    )
+
+    await userEvent.setup().click(button)
 
     expect(onSearch).toHaveBeenCalled()
   })
